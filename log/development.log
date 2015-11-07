@@ -1,0 +1,1096 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-07 20:15:29 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  iodine (0.1.9) lib/iodine/http/rack_support.rb:22:in `call'
+  iodine (0.1.9) lib/iodine/http/http1.rb:176:in `dispatch'
+  iodine (0.1.9) lib/iodine/http/http1.rb:91:in `on_message'
+  iodine (0.1.9) lib/iodine/protocol.rb:183:in `call'
+  iodine (0.1.9) lib/iodine/core.rb:65:in `work'
+  iodine (0.1.9) lib/iodine/core.rb:55:in `cycle'
+  iodine (0.1.9) lib/iodine/core.rb:75:in `block (2 levels) in startup'
+
+
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.4ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (28.6ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (68.1ms)
+  [1m[36m (264.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (132.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20151026093316)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151026093316"]]
+  [1m[35m (144.6ms)[0m  commit transaction
+Migrating to AddDeviseToUsers (20151026093339)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "reset_password_token" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "remember_created_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "current_sign_in_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "current_sign_in_ip" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151026093339"]]
+  [1m[35m (126.6ms)[0m  commit transaction
+Migrating to DeviseInvitableAddToUsers (20151026133935)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "users" ADD "invitation_token" varchar
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "invitation_created_at" datetime[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" ADD "invitation_sent_at" datetime
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "invitation_accepted_at" datetime[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "invitation_limit" integer
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "invited_by_id" integer[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "invited_by_type" varchar
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "invitations_count" integer DEFAULT 0[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  CREATE  INDEX "index_users_on_invitations_count" ON "users" ("invitations_count")
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_invitation_token" ON "users" ("invitation_token")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitation_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_users_on_invited_by_id" ON "users" ("invited_by_id")[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "invitation_token" varchar, "invitation_created_at" datetime, "invitation_sent_at" datetime, "invitation_accepted_at" datetime, "invitation_limit" integer, "invited_by_id" integer, "invited_by_type" varchar, "invitations_count" integer DEFAULT 0) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invited_by_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invited_by_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitation_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_ausers_on_invited_by_id" ON "ausers" ("invited_by_id")
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "tindex_ausers_on_invitation_token" ON "ausers" ("invitation_token")[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_ausers_on_invitations_count" ON "ausers" ("invitations_count")
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "users"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '', "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "invitation_token" varchar, "invitation_created_at" datetime, "invitation_sent_at" datetime, "invitation_accepted_at" datetime, "invitation_limit" integer, "invited_by_id" integer, "invited_by_type" varchar, "invitations_count" integer DEFAULT 0) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_invitations_count' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_invitations_count' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_invitation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_invitation_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_invited_by_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_invited_by_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "index_users_on_invitations_count" ON "users" ("invitations_count")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_invitation_token" ON "users" ("invitation_token")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitation_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_users_on_invited_by_id" ON "users" ("invited_by_id")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151026133935"]]
+  [1m[36m (129.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateInvitations (20151027073636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "invitations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sender_id" integer, "receiver_id" integer, "token" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_invitations_on_sender_id" ON "invitations" ("sender_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_invitations_on_sender_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_invitations_on_sender_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_invitations_on_receiver_id" ON "invitations" ("receiver_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151027073636"]]
+  [1m[35m (152.1ms)[0m  commit transaction
+Migrating to CreateFriendships (20151028103337)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "friendships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sender_id" integer, "receiver_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151028103337"]]
+  [1m[35m (129.3ms)[0m  commit transaction
+Migrating to CreateChats (20151030045120)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "chats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sender_id" integer, "receiver_id" integer, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151030045120"]]
+  [1m[35m (127.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_invitations_on_receiver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_invitations_on_receiver_id' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_invitations_on_sender_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_invitations_on_sender_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invited_by_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invited_by_id' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitation_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_invitations_count' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-07 20:16:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5190ms (Views: 5103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+Started GET "/assets/invitation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+Started GET "/assets/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+Started GET "/assets/custom.self-64bb33165794bb8c690be3eb50f95a3ffc23743f865864fb49f2d1e3eaa1aa4f.css?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+
+
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+
+
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+
+
+Started GET "/assets/invitation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+
+
+Started GET "/assets/application.self-77bc1b04644867244befe117aad0ce71b07f7dae561f2e1931a5ddcb4766fef1.js?body=1" for 127.0.0.1 at 2015-11-07 20:16:30 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-07 20:16:49 +0530
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 338ms (Views: 337.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-64bb33165794bb8c690be3eb50f95a3ffc23743f865864fb49f2d1e3eaa1aa4f.css?body=1" for 127.0.0.1 at 2015-11-07 20:16:50 +0530
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-11-07 20:16:53 +0530
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-11-07 20:16:55 +0530
+Processing by DeviseInvitable::RegistrationsController#new as HTML
+Processing by DeviseInvitable::RegistrationsController#new as HTML
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-11-07 20:17:00 +0530
+Processing by DeviseInvitable::RegistrationsController#new as HTML
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-11-07 20:17:01 +0530
+Processing by DeviseInvitable::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6536.4ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (352.7ms)
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (2071.7ms)
+Completed 200 OK in 7749ms (Views: 7717.6ms | ActiveRecord: 2.1ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6857.2ms)
+
+Completed 200 OK in 4075ms (Views: 4073.1ms | ActiveRecord: 0.0ms)
+
+Completed 200 OK in 2753ms (Views: 2751.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-11-07 20:17:04 +0530
+Completed 200 OK in 8544ms (Views: 8542.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-11-07 20:17:05 +0530
+Processing by Devise::SessionsController#new as HTML
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (915.5ms)
+Completed 500 Internal Server Error in 978ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true %>
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb__712681861__660031668'
+
+
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-11-07 20:17:08 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3996.6ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2504.7ms)
+Completed 500 Internal Server Error in 3253ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (can't add a new key into hash during iteration):
+    2: <html>
+    3: <head>
+    4:   <title>Linkedchats</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__919075338_90973710'
+
+
+Completed 200 OK in 7022ms (Views: 7019.4ms | ActiveRecord: 0.0ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (233.7ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (863.8ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (670.7ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (1192.5ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (349.8ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (595.8ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/huzefa/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (1629.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-11-07 20:17:25 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (66.7ms)
+Completed 200 OK in 1496ms (Views: 1494.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-11-07 20:17:32 +0530
+Processing by DeviseInvitable::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 1017ms (Views: 1015.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-11-07 20:17:34 +0530
+Processing by DeviseInvitable::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QudH2wfR1ot001zcamVUDqJ74Qa7zxDd6HnKcmDC8Ksowun7EmwD7eb/TNIO7vOWl3x36GGdG7BhONetlitgFw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."encrypted_password" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", ""], ["encrypted_password", ""]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (424.8ms)
+Completed 200 OK in 5911ms (Views: 2606.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-11-07 20:17:54 +0530
+Processing by DeviseInvitable::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oFf2u5ZC1GCYo7xP1H60QdI1vJ+pBvKM3wIMvFVFkM3Kclibg/8BBgqPrEGw9RPZ5zIqcXNU+eFWQxFjo6wAcQ==", "user"=>{"email"=>"huzefabiyawarwala045@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."encrypted_password" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "huzefabiyawarwala045@gmail.com"], ["encrypted_password", ""]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'huzefabiyawarwala045@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "huzefabiyawarwala045@gmail.com"], ["encrypted_password", "$2a$10$o75AI7agCN3EstdLJRf/V.BUjYzBgmKd8Dm01IXDMZDEhC83kpfp6"], ["created_at", "2015-11-07 14:48:09.684492"], ["updated_at", "2015-11-07 14:48:09.684492"]]
+  [1m[36m (147.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-11-07 14:48:09.885645"], ["current_sign_in_at", "2015-11-07 14:48:09.885645"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2015-11-07 14:48:09.959064"], ["id", 1]]
+  [1m[35m (138.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/users
+Completed 302 Found in 15464ms (ActiveRecord: 289.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-07 20:18:10 +0530
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.9ms)[0m  select * from users where id  not IN  (select sender_id from friendships where receiver_id = 1 UNION 
+                              select receiver_id from friendships where sender_id = 1 )
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1888ms (Views: 1833.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-11-07 20:18:23 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (222.9ms)
+Completed 200 OK in 2378ms (Views: 2376.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-11-07 20:18:28 +0530
+Processing by DeviseInvitable::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+
+  Rendered devise/registrations/new.html.erb within layouts/application (125.9ms)
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-11-07 20:18:28 +0530
+Processing by DeviseInvitable::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (135.1ms)
+Completed 200 OK in 2035ms (Views: 2032.8ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 2525ms (Views: 2521.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-11-07 20:18:47 +0530
+Processing by DeviseInvitable::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+cpjIDAp96o306wd9qC8oZzP/PUM8ClD3FwRhji93VbTKTpGdvSSbovNbDDwE0C5LzHR0l2NoudXWG2nhHj4lw==", "user"=>{"email"=>"khadija@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."encrypted_password" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "khadija@gmail.com"], ["encrypted_password", ""]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'khadija@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "khadija@gmail.com"], ["encrypted_password", "$2a$10$6pV01jll4krHLsIVY/f47eclwIGZ2x31MPr1Vex/sWOROrgMwq14G"], ["created_at", "2015-11-07 14:48:47.947482"], ["updated_at", "2015-11-07 14:48:47.947482"]]
+  [1m[36m (168.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-11-07 14:48:48.250047"], ["current_sign_in_at", "2015-11-07 14:48:48.250047"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2015-11-07 14:48:48.315977"], ["id", 2]]
+  [1m[35m (190.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1032ms (ActiveRecord: 362.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-07 20:18:48 +0530
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.6ms)[0m  select * from users where id  not IN  (select sender_id from friendships where receiver_id = 2 UNION 
+                              select receiver_id from friendships where sender_id = 2 )
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1913ms (Views: 1900.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/invitation/2/1" for 127.0.0.1 at 2015-11-07 20:18:55 +0530
+Processing by InvitationController#insert as HTML
+  Parameters: {"id"=>"2", "idr"=>"1"}
+  [1m[36mFriendship Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "friendships" WHERE "friendships"."sender_id" = ? AND "friendships"."receiver_id" = ? LIMIT 1[0m  [["sender_id", 2], ["receiver_id", 1]]
+  [1m[35mFriendship Exists (0.3ms)[0m  SELECT  1 AS one FROM "friendships" WHERE "friendships"."sender_id" = ? AND "friendships"."receiver_id" = ? LIMIT 1  [["sender_id", 1], ["receiver_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "invitations" ("sender_id", "receiver_id", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["sender_id", 2], ["receiver_id", 1], ["token", "6a0YwUhWHZcUIH-eBcWDWw"], ["created_at", "2015-11-07 14:48:55.373590"], ["updated_at", "2015-11-07 14:48:55.373590"]]
+  [1m[36m (377.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered user_mailer/account_invitation.html.erb within layouts/mailer (1.7ms)
+  Rendered user_mailer/account_invitation.text.erb within layouts/mailer (0.9ms)
+
+UserMailer#account_invitation: processed outbound mail in 32310.0ms
+
+Sent mail to huzefabiyawarwala045@gmail.com (8077.1ms)
+Date: Sat, 07 Nov 2015 20:19:33 +0530
+From: noreply@example.com
+To: huzefabiyawarwala045@gmail.com
+Message-ID: <563e0f7d77524_15ac56e47046913@huzefa-HP-450-Notebook-PC.mail>
+Subject: Invitation Request.
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_563e0f7d29443_15ac56e47046873";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_563e0f7d29443_15ac56e47046873
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi  Huzefa 
+
+Hi am inviting you to be my friend . Please accept it.
+
+----==_mimepart_563e0f7d29443_15ac56e47046873
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <h1>LinkedChats</h1>
+
+Hi , it 2nd version here with token is : , 6a0YwUhWHZcUIH-eBcWDWw
+
+<p>
+Welcome to the LinkedChats! Click on the link below to activate your account:
+</p>
+
+http://localhost:3000/invitation/6a0YwUhWHZcUIH-eBcWDWw/edit
+
+
+  </body>
+</html>
+
+----==_mimepart_563e0f7d29443_15ac56e47046873--
+
+Redirected to http://localhost:3000/users
+Completed 302 Found in 45982ms (ActiveRecord: 380.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-07 20:19:42 +0530
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  select * from users where id  not IN  (select sender_id from friendships where receiver_id = 2 UNION 
+                              select receiver_id from friendships where sender_id = 2 )
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 864ms (Views: 838.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/invitation/6a0YwUhWHZcUIH-eBcWDWw/edit" for 127.0.0.1 at 2015-11-07 20:19:51 +0530
+Processing by InvitationController#edit as HTML
+  Parameters: {"id"=>"6a0YwUhWHZcUIH-eBcWDWw"}
+  [1m[36mInvitation Load (0.4ms)[0m  [1mSELECT  "invitations".* FROM "invitations" WHERE "invitations"."token" = ? LIMIT 1[0m  [["token", "6a0YwUhWHZcUIH-eBcWDWw"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "friendships" ("sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["sender_id", 2], ["receiver_id", 1], ["created_at", "2015-11-07 14:49:52.053054"], ["updated_at", "2015-11-07 14:49:52.053054"]]
+  [1m[35m (172.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users
+Completed 302 Found in 792ms (ActiveRecord: 174.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-07 20:19:53 +0530
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  select * from users where id  not IN  (select sender_id from friendships where receiver_id = 2 UNION 
+                              select receiver_id from friendships where sender_id = 2 )
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3011ms (Views: 2804.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/chats" for 127.0.0.1 at 2015-11-07 20:20:00 +0530
+Processing by ChatsController#chat as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriendship Load (0.3ms)[0m  select * from friendships where sender_id= 2 or receiver_id= 2 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered chats/chat.html.erb within layouts/application (780.3ms)
+Completed 200 OK in 3605ms (Views: 3336.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/chats" for 127.0.0.1 at 2015-11-07 20:20:13 +0530
+Processing by ChatsController#chat as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (0.4ms)[0m  [1mselect * from friendships where sender_id= 1 or receiver_id= 1 [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered chats/chat.html.erb within layouts/application (469.4ms)
+Completed 200 OK in 3233ms (Views: 3102.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/chats/1/2" for 127.0.0.1 at 2015-11-07 20:20:21 +0530
+Processing by ChatsController#show_messages as JS
+  Parameters: {"id"=>"1", "idr"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mChat Load (0.4ms)[0m  select text,created_at from chats where sender_id= 1 and receiver_id= '2' OR sender_id= '2' and receiver_id= 1 
+						ORDER BY created_at
+  Rendered chats/_message_display.html.erb (2741.6ms)
+  Rendered chats/show_messages.js.erb (2984.2ms)
+Completed 200 OK in 3278ms (Views: 3054.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/chats/2/1" for 127.0.0.1 at 2015-11-07 20:20:29 +0530
+Processing by ChatsController#show_messages as JS
+  Parameters: {"id"=>"2", "idr"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mChat Load (0.5ms)[0m  select text,created_at from chats where sender_id= 2 and receiver_id= '1' OR sender_id= '1' and receiver_id= 2 
+						ORDER BY created_at
+  Rendered chats/_message_display.html.erb (3.1ms)
+  Rendered chats/show_messages.js.erb (63.4ms)
+Completed 200 OK in 336ms (Views: 144.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/chats" for 127.0.0.1 at 2015-11-07 20:20:45 +0530
+Processing by ChatsController#create as JS
+  Parameters: {"utf8"=>"✓", "chat"=>{"text"=>"hi khadija ... huzefa here ", "sender_id"=>"2", "receiver_id"=>"1"}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "chats" ("sender_id", "receiver_id", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sender_id", 2], ["receiver_id", 1], ["text", "hi khadija ... huzefa here "], ["created_at", "2015-11-07 14:50:45.641855"], ["updated_at", "2015-11-07 14:50:45.641855"]]
+  [1m[35m (211.2ms)[0m  commit transaction
+  [1m[36mChat Load (0.5ms)[0m  [1mselect text,created_at from chats where sender_id= 2 and receiver_id= '1' OR sender_id= '1' and receiver_id= 2 
+						ORDER BY created_at[0m
+  Rendered chats/_message_display.html.erb (3.6ms)
+  Rendered chats/create.js.erb (520.1ms)
+Completed 200 OK in 1437ms (Views: 688.9ms | ActiveRecord: 213.0ms)
+
+
+Started GET "/chats/1/2" for 127.0.0.1 at 2015-11-07 20:20:54 +0530
+Processing by ChatsController#show_messages as JS
+  Parameters: {"id"=>"1", "idr"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mChat Load (0.6ms)[0m  [1mselect text,created_at from chats where sender_id= 1 and receiver_id= '2' OR sender_id= '2' and receiver_id= 1 
+						ORDER BY created_at[0m
+  Rendered chats/_message_display.html.erb (3.0ms)
+  Rendered chats/show_messages.js.erb (186.5ms)
+Completed 200 OK in 594ms (Views: 443.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/chats" for 127.0.0.1 at 2015-11-07 20:25:38 +0530
+Processing by ChatsController#chat as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mFriendship Load (0.4ms)[0m  [1mselect * from friendships where sender_id= 2 or receiver_id= 2 [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered chats/chat.html.erb within layouts/application (197.2ms)
+Completed 200 OK in 5635ms (Views: 5549.9ms | ActiveRecord: 1.0ms)
+
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:25:45 +0530
+Started GET "/assets/custom.self-64bb33165794bb8c690be3eb50f95a3ffc23743f865864fb49f2d1e3eaa1aa4f.css?body=1" for 127.0.0.1 at 2015-11-07 20:25:45 +0530
+Started GET "/assets/invitation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:25:46 +0530
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:25:46 +0530
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-07 20:25:46 +0530
+Started GET "/assets/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:25:46 +0530
+
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-07 20:25:47 +0530
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-07 20:25:47 +0530
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-07 20:25:47 +0530
+Started GET "/assets/invitation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:25:47 +0530
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:25:47 +0530
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:25:47 +0530
+
+
+Started GET "/assets/application.self-f2d0f0416edda9bda3ac5ca06b9e9fbc3852d2158e2bb9704c22af6ed4ddd778.js?body=1" for 127.0.0.1 at 2015-11-07 20:25:47 +0530
+
+
+Started GET "/chats/2/1" for 127.0.0.1 at 2015-11-07 20:25:51 +0530
+Processing by ChatsController#show_messages as JS
+  Parameters: {"id"=>"2", "idr"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mChat Load (0.5ms)[0m  select text,created_at from chats where sender_id= 2 and receiver_id= '1' OR sender_id= '1' and receiver_id= 2 
+						ORDER BY created_at
+  Rendered chats/_message_display.html.erb (3.4ms)
+  Rendered chats/show_messages.js.erb (298.8ms)
+Completed 200 OK in 644ms (Views: 542.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/chats" for 127.0.0.1 at 2015-11-07 20:26:07 +0530
+Processing by ChatsController#chat as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFriendship Load (0.3ms)[0m  select * from friendships where sender_id= 1 or receiver_id= 1 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered chats/chat.html.erb within layouts/application (321.5ms)
+Completed 200 OK in 3108ms (Views: 3103.4ms | ActiveRecord: 1.1ms)
+
+
+
+
+
+
+
+
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:26:11 +0530
+
+
+Started GET "/assets/custom.self-64bb33165794bb8c690be3eb50f95a3ffc23743f865864fb49f2d1e3eaa1aa4f.css?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+Started GET "/assets/invitation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+Started GET "/assets/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+
+
+
+
+
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+
+
+
+
+
+Started GET "/assets/application.self-f2d0f0416edda9bda3ac5ca06b9e9fbc3852d2158e2bb9704c22af6ed4ddd778.js?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+Started GET "/assets/invitation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:26:12 +0530
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:26:13 +0530
+
+
+Started GET "/chats/1/2" for 127.0.0.1 at 2015-11-07 20:26:17 +0530
+Processing by ChatsController#show_messages as JS
+  Parameters: {"id"=>"1", "idr"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mChat Load (0.5ms)[0m  [1mselect text,created_at from chats where sender_id= 1 and receiver_id= '2' OR sender_id= '2' and receiver_id= 1 
+						ORDER BY created_at[0m
+  Rendered chats/_message_display.html.erb (3.1ms)
+  Rendered chats/show_messages.js.erb (192.8ms)
+Completed 200 OK in 344ms (Views: 338.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/chats" for 127.0.0.1 at 2015-11-07 20:26:46 +0530
+Processing by ChatsController#create as JS
+  Parameters: {"utf8"=>"✓", "chat"=>{"text"=>"hi huzefa ... how are you ?", "sender_id"=>"2", "receiver_id"=>"1"}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "chats" ("sender_id", "receiver_id", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["sender_id", 2], ["receiver_id", 1], ["text", "hi huzefa ... how are you ?"], ["created_at", "2015-11-07 14:56:46.920037"], ["updated_at", "2015-11-07 14:56:46.920037"]]
+  [1m[36m (146.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mChat Load (0.6ms)[0m  select text,created_at from chats where sender_id= 2 and receiver_id= '1' OR sender_id= '1' and receiver_id= 2 
+						ORDER BY created_at
+  Rendered chats/_message_display.html.erb (2.6ms)
+  Rendered chats/create.js.erb (195.4ms)
+Completed 200 OK in 981ms (Views: 500.6ms | ActiveRecord: 148.2ms)
+
+
+Started POST "/chats" for 127.0.0.1 at 2015-11-07 20:29:42 +0530
+Processing by ChatsController#create as JS
+  Parameters: {"utf8"=>"✓", "chat"=>{"text"=>"i am fine khadduu..... :)", "sender_id"=>"1", "receiver_id"=>"2"}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "chats" ("sender_id", "receiver_id", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sender_id", 1], ["receiver_id", 2], ["text", "i am fine khadduu..... :)"], ["created_at", "2015-11-07 14:59:42.833285"], ["updated_at", "2015-11-07 14:59:42.833285"]]
+  [1m[35m (170.1ms)[0m  commit transaction
+  [1m[36mChat Load (0.6ms)[0m  [1mselect text,created_at from chats where sender_id= 1 and receiver_id= '2' OR sender_id= '2' and receiver_id= 1 
+						ORDER BY created_at[0m
+  Rendered chats/_message_display.html.erb (2.7ms)
+  Rendered chats/create.js.erb (162.3ms)
+Completed 200 OK in 885ms (Views: 444.1ms | ActiveRecord: 171.6ms)
+
+
+Started GET "/users/chats" for 127.0.0.1 at 2015-11-07 20:30:00 +0530
+Processing by ChatsController#chat as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mFriendship Load (0.6ms)[0m  [1mselect * from friendships where sender_id= 2 or receiver_id= 2 [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered chats/chat.html.erb within layouts/application (407.3ms)
+Completed 200 OK in 6349ms (Views: 6171.0ms | ActiveRecord: 0.9ms)
+
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:30:08 +0530
+Started GET "/assets/custom.self-64bb33165794bb8c690be3eb50f95a3ffc23743f865864fb49f2d1e3eaa1aa4f.css?body=1" for 127.0.0.1 at 2015-11-07 20:30:08 +0530
+Started GET "/assets/invitation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:30:08 +0530
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:30:08 +0530
+Started GET "/assets/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-07 20:30:09 +0530
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-07 20:30:09 +0530
+
+
+
+
+
+
+
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-07 20:30:09 +0530
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-07 20:30:09 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-07 20:30:09 +0530
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:30:09 +0530
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:30:09 +0530
+Started GET "/assets/invitation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-07 20:30:09 +0530
+
+Started GET "/assets/application.self-61ab8bd022778ee778ef673239b36250035fab01c4a7ad77d057615393688f7c.js?body=1" for 127.0.0.1 at 2015-11-07 20:30:10 +0530
+
+
+Started GET "/chats/2/1" for 127.0.0.1 at 2015-11-07 20:30:13 +0530
+Processing by ChatsController#show_messages as JS
+  Parameters: {"id"=>"2", "idr"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mChat Load (0.5ms)[0m  select text,created_at from chats where sender_id= 2 and receiver_id= '1' OR sender_id= '1' and receiver_id= 2 
+						ORDER BY created_at
+  Rendered chats/_message_display.html.erb (2.6ms)
+  Rendered chats/show_messages.js.erb (304.0ms)
+Completed 200 OK in 438ms (Views: 310.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/chats" for 127.0.0.1 at 2015-11-07 20:30:20 +0530
+Processing by ChatsController#create as JS
+  Parameters: {"utf8"=>"✓", "chat"=>{"text"=>"okiii", "sender_id"=>"2", "receiver_id"=>"1"}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "chats" ("sender_id", "receiver_id", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sender_id", 2], ["receiver_id", 1], ["text", "okiii"], ["created_at", "2015-11-07 15:00:21.532100"], ["updated_at", "2015-11-07 15:00:21.532100"]]
+  [1m[35m (214.0ms)[0m  commit transaction
+  [1m[36mChat Load (0.3ms)[0m  [1mselect text,created_at from chats where sender_id= 2 and receiver_id= '1' OR sender_id= '1' and receiver_id= 2 
+						ORDER BY created_at[0m
+  Rendered chats/_message_display.html.erb (3.3ms)
+  Rendered chats/create.js.erb (193.0ms)
+Completed 200 OK in 1381ms (Views: 504.2ms | ActiveRecord: 215.5ms)
+
+
+Started POST "/chats" for 127.0.0.1 at 2015-11-07 20:30:37 +0530
+Processing by ChatsController#create as JS
+  Parameters: {"utf8"=>"✓", "chat"=>{"text"=>"so went to masjid ?", "sender_id"=>"", "receiver_id"=>""}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "chats" ("sender_id", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["sender_id", 1], ["text", "so went to masjid ?"], ["created_at", "2015-11-07 15:00:37.200763"], ["updated_at", "2015-11-07 15:00:37.200763"]]
+  [1m[36m (225.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mChat Load (0.6ms)[0m  select text,created_at from chats where sender_id= 1 and receiver_id= '' OR sender_id= '' and receiver_id= 1 
+						ORDER BY created_at
+  Rendered chats/_message_display.html.erb (2.6ms)
+  Rendered chats/create.js.erb (184.1ms)
+Completed 200 OK in 516ms (Views: 207.4ms | ActiveRecord: 226.9ms)
+
+
+Started GET "/chats/1/2" for 127.0.0.1 at 2015-11-07 20:30:39 +0530
+Processing by ChatsController#show_messages as JS
+  Parameters: {"id"=>"1", "idr"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mChat Load (0.2ms)[0m  select text,created_at from chats where sender_id= 1 and receiver_id= '2' OR sender_id= '2' and receiver_id= 1 
+						ORDER BY created_at
+  Rendered chats/_message_display.html.erb (2.0ms)
+  Rendered chats/show_messages.js.erb (13.9ms)
+Completed 200 OK in 44ms (Views: 38.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/chats" for 127.0.0.1 at 2015-11-07 20:30:44 +0530
+Processing by ChatsController#create as JS
+  Parameters: {"utf8"=>"✓", "chat"=>{"text"=>"so went to masjid ?", "sender_id"=>"1", "receiver_id"=>"2"}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "chats" ("sender_id", "receiver_id", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sender_id", 1], ["receiver_id", 2], ["text", "so went to masjid ?"], ["created_at", "2015-11-07 15:00:44.528593"], ["updated_at", "2015-11-07 15:00:44.528593"]]
+  [1m[35m (176.8ms)[0m  commit transaction
+  [1m[36mChat Load (0.3ms)[0m  [1mselect text,created_at from chats where sender_id= 1 and receiver_id= '2' OR sender_id= '2' and receiver_id= 1 
+						ORDER BY created_at[0m
+  Rendered chats/_message_display.html.erb (1.2ms)
+  Rendered chats/create.js.erb (7.8ms)
+Completed 200 OK in 230ms (Views: 22.1ms | ActiveRecord: 177.9ms)
